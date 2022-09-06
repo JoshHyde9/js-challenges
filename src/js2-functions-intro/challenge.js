@@ -134,19 +134,18 @@ export const getGrade = (score) => {
     return "Score unavailable";
   }
 
-  switch (score) {
-    case score >= 80:
-      return "A";
-    case score >= 70:
-      return "B";
-    case score >= 60:
-      return "C";
-    case score >= 50:
-      return "D";
-    case score >= 40:
-      return "E";
-    default:
-      "F";
+  if (score >= 80) {
+    return "A";
+  } else if (score >= 70) {
+    return "B";
+  } else if (score >= 60) {
+    return "C";
+  } else if (score >= 50) {
+    return "D";
+  } else if (score >= 40) {
+    return "E";
+  } else {
+    return "F";
   }
 };
 
