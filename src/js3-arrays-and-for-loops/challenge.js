@@ -203,7 +203,6 @@ export const generateHighscores = (playersArr, scoresArr) => {
  * @return {string} "ertnyecpd"
  */
 
-// TODO: Finish this
 export const encryptString = (toEncrypt) => {
   if (typeof toEncrypt !== "string") {
     return;
@@ -213,5 +212,19 @@ export const encryptString = (toEncrypt) => {
     return toEncrypt;
   }
 
-  return;
+  const sortingArray = [[], [], []];
+
+  for (let i = 0; i < toEncrypt.length; i++) {
+    sortingArray[i % 3].push(toEncrypt.charAt(i));
+  }
+
+  let encryptedMessage = "";
+
+  sortingArray.map((_, i) => {
+    sortingArray[i].map((_, j) => {
+      encryptedMessage += sortingArray[i][j];
+    });
+  });
+
+  return encryptedMessage;
 };
