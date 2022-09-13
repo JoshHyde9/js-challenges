@@ -81,7 +81,9 @@ export const sortCharactersAlphabetically = (charcterArr) => {
  */
 
 export const sortNumbersHighToLow = (numberArr) => {
-  return;
+  const sortedLowToHigh = numberArr.sort((a, b) => a - b);
+
+  return sortedLowToHigh.reverse();
 };
 
 /**
@@ -112,7 +114,14 @@ export const checkItemInstock = (toCheck) => {
     "blueberry",
     "melon",
   ];
-  return;
+
+  const aisle = stockList.indexOf(toCheck);
+
+  if (aisle >= 0) {
+    return `${toCheck} is instock, it is on aisle ${aisle}.`;
+  } else {
+    return `Sorry ${toCheck} is not instock.`;
+  }
 };
 
 /**
@@ -126,7 +135,10 @@ export const checkItemInstock = (toCheck) => {
  */
 
 export const checkPrimaryColours = (coloursArr) => {
-  return;
+  const primaryColours = ["red", "blue", "yellow"];
+
+  const check = coloursArr.every((colour) => primaryColours.includes(colour));
+  return check;
 };
 
 /**
