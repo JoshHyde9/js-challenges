@@ -60,7 +60,13 @@ export const reverseString = (toReverse) => {
  */
 
 export const sortCharactersAlphabetically = (charcterArr) => {
-  return;
+  const toLowerCase = charcterArr.map((value) => {
+    return value.toLowerCase();
+  });
+
+  const sortArray = toLowerCase.sort();
+
+  return sortArray;
 };
 
 /**
