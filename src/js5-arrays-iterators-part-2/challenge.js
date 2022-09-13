@@ -187,7 +187,7 @@ export const totalNestedScoresArr = (scoresArr) => {
  */
 
 /**
- * This is the same challenge as advanced JS4, can you implement it differently.
+ * This is the same challenge as advanced JS3, can you implement it differently.
  * Can you complete this challenge using the REDUCE iterator?
  *
  * A function that takes a string and creates a simple encrypted message.
@@ -212,5 +212,28 @@ export const totalNestedScoresArr = (scoresArr) => {
  */
 
 export const encryptString = (toEncrypt) => {
-  return;
+  if (typeof toEncrypt !== "string") {
+    return;
+  }
+
+  if (toEncrypt.length <= 3) {
+    return toEncrypt;
+  }
+
+  const splitString = toEncrypt.split("");
+
+  const encrypt = splitString
+    .reduce(
+      (total, current, index) => {
+        const remainder = index % 3;
+        total[remainder].push(current);
+        return total;
+      },
+      [[], [], []]
+    )
+    .flat();
+
+  const encryptedString = encrypt.join("");
+
+  return encryptedString;
 };
