@@ -22,7 +22,13 @@
  */
 
 export const totalScoresArr = (scoresArr) => {
-  return;
+  const initalValue = 0;
+  const sumOfScores = scoresArr.reduce(
+    (previousValue, currentValue) => previousValue + currentValue,
+    initalValue
+  );
+
+  return sumOfScores;
 };
 
 /**
@@ -35,7 +41,13 @@ export const totalScoresArr = (scoresArr) => {
  */
 
 export const reverseString = (toReverse) => {
-  return;
+  const splitString = toReverse.split("");
+
+  const reverse = splitString.reverse();
+
+  const reversedString = reverse.join("");
+
+  return reversedString;
 };
 
 /**
