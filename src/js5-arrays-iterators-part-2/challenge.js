@@ -155,7 +155,13 @@ export const checkPrimaryColours = (coloursArr) => {
  */
 
 export const checkStringPalindrome = (stringOne) => {
-  return;
+  const reversedWord = reverseString(stringOne);
+
+  if (reversedWord === stringOne) {
+    return true;
+  } else {
+    return false;
+  }
 };
 
 /**
@@ -169,7 +175,11 @@ export const checkStringPalindrome = (stringOne) => {
  */
 
 export const totalNestedScoresArr = (scoresArr) => {
-  return;
+  const aggregatedArray = scoresArr.map((array) => {
+    const aggregatedIndexedArray = totalScoresArr(array);
+    return aggregatedIndexedArray;
+  });
+  return aggregatedArray;
 };
 
 /**
