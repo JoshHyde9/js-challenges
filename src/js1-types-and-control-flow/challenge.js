@@ -54,9 +54,7 @@ const addNumber2 = 24;
 
 export const addNumbers = () => {
   // Write your code here
-  const sum = addNumber1 + addNumber2;
-
-  return sum;
+  return addNumber1 + addNumber2;
 };
 
 /* Intermediate Challenges */
@@ -71,9 +69,7 @@ const password = "thisIsMyVeryLongPassword123456789";
 
 export const findLengthOfPassword = () => {
   // Write your code here
-  const passwordLength = password.length;
-
-  return passwordLength;
+  return password.length;
 };
 
 /**
@@ -119,9 +115,10 @@ export const getIsValidOnNameTag = () => {
   const firstChar = nameTagOption.substring(0, 1); // Get the first character
 
   // Check for invalid name
-  if (nameTagOption > 8 && firstChar !== firstChar.toUpperCase()) return false;
+  const isValidName =
+    nameTagOption <= 8 && firstChar === firstChar.toUpperCase();
 
-  return true;
+  return isValidName;
 };
 
 /* Advanced Challenges */
@@ -136,9 +133,7 @@ const stringToConvert = "14.45";
 
 export const convertStringToNumber = () => {
   // Write your code here
-  const toNumber = parseFloat(stringToConvert);
-
-  return toNumber;
+  return parseFloat(stringToConvert);
 };
 
 /**
