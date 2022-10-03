@@ -59,7 +59,7 @@ describe("addFurnitureStorLocation() tests", () => {
   });
 });
 
-xdescribe("makeSpaceship() tests", () => {
+describe("makeSpaceship() tests", () => {
   it("Should return an object", () => {
     expect(typeof makeSpaceship("rocinante", 8, "epstein drive", true)).toBe(
       "object"

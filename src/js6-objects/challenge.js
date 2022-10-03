@@ -56,6 +56,7 @@ export const makeSpaceship = (
   canTravelSolarSystems
 ) => {
   /* Write code here */
+  return { name, noOfSeats, engineType, canTravelSolarSystems };
 };
 
 /* Intermediate Challenges */
