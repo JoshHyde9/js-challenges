@@ -88,7 +88,7 @@ describe("makeSpaceship() tests", () => {
   });
 });
 
-xdescribe("setUserName() tests", () => {
+describe("setUserName() tests", () => {
   const user1 = { name: "john smith", username: "johnnyboiii" };
   const user2 = { name: "jane doe", username: "killerZ" };
   it("Should return and object", () => {

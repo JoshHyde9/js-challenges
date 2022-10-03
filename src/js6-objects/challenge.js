@@ -70,6 +70,11 @@ export const makeSpaceship = (
  */
 export const setUserName = (user, username) => {
   /* Write code here */
+  if (!user.username) {
+    return { name: user.name, username };
+  } else {
+    return user;
+  }
 };
 
 /**
