@@ -118,7 +118,7 @@ describe("setUserName() tests", () => {
   });
 });
 
-xdescribe("splitFullNameToFirstAndLast() tests", () => {
+describe("splitFullNameToFirstAndLast() tests", () => {
   const customer1 = { fullName: "Barry Chuckle" };
   const customer2 = { fullName: "Paul Chuckle" };
 

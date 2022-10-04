@@ -86,6 +86,13 @@ export const setUserName = (user, username) => {
  */
 export const splitFullNameToFirstAndLast = (customer) => {
   /* Write code here */
+  const { fullName } = customer;
+
+  const name = fullName.split(" ");
+  const firstName = name[0];
+  const lastName = name[1];
+
+  return { fullName, firstName, lastName };
 };
 
 /**
