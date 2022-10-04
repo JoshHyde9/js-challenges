@@ -18,9 +18,7 @@
  */
 export const createFullName = (firstName, lastName) => {
   /* Write your code here */
-  const fullName = `${firstName} ${lastName}`;
-
-  return fullName;
+  return `${firstName} ${lastName}`;
 };
 
 /**
@@ -50,9 +48,7 @@ export const findSmallestNumber = (number1, number2) => {
  */
 export const multiplyNumbers = (number1, number2) => {
   /* Write your code here */
-  const product = number1 * number2;
-
-  return product;
+  return number1 * number2;
 };
 
 /* Intermediate Challenges */
@@ -106,9 +102,7 @@ export const calculateLifetimeSupply = (snickersPerDay, age, maxAge) => {
   const snickersPerYear = snickersPerDay * 365;
   const yearsLeft = maxAge - age;
 
-  const snickersLeft = snickersPerYear * yearsLeft;
-
-  return snickersLeft;
+  return snickersPerYear * yearsLeft;
 };
 
 /* Advanced Challenges */
