@@ -106,6 +106,7 @@ export const splitFullNameToFirstAndLast = (customer) => {
  */
 export const accessGivenKey = (object, key) => {
   /* Write code here */
+  return object[key];
 };
 
 /* Advanced Challenges */
@@ -119,6 +120,9 @@ export const accessGivenKey = (object, key) => {
  */
 export const getUserAddress = (user) => {
   /* Write code here */
+  const { line1, line2, city, postcode } = user.address;
+
+  return `${line1} ${line2} ${city} ${postcode}`;
 };
 
 /**
@@ -131,6 +135,13 @@ export const getUserAddress = (user) => {
  */
 export const setSafeAllergens = (customer, allergenList) => {
   /* Write code here */
+  const { allergies } = customer;
+
+  const safeAllergens = allergenList.filter((alergy) => {
+    return !allergies.includes(alergy);
+  });
+
+  return { ...customer, safeAllergens };
 };
 
 /* Expert Challenge */
@@ -145,4 +156,5 @@ export const setSafeAllergens = (customer, allergenList) => {
  */
 export const mergeFurniture = (furnitureLocationData, furnitureProductData) => {
   /* Write code here */
+  return { ...furnitureLocationData, ...furnitureProductData };
 };
