@@ -17,7 +17,11 @@
  * @returns {string[]} A list of the employees quotes for the website
  */
 export const getEmployeeQuotes = (employeeArr) => {
-  // Write code here
+  const employeeQuotes = employeeArr.map((employee) => {
+    return employee.quote;
+  });
+
+  return employeeQuotes;
 };
 
 /**
@@ -27,7 +31,11 @@ export const getEmployeeQuotes = (employeeArr) => {
  * @returns {{name: string, quote: string, yearsEmployed: number, isManagement: boolean}[]} An array containing only managers
  */
 export const getTheManagers = (employeeArr) => {
-  // Write code here
+  const managers = employeeArr.filter((employee) => {
+    return employee.isManagement;
+  });
+
+  return managers;
 };
 
 /**
@@ -37,7 +45,7 @@ export const getTheManagers = (employeeArr) => {
  * @returns {number} The number of the keys on the object
  */
 export const getNumberOfKeys = (object) => {
-  // Write code here
+  return Object.keys(object).length;
 };
 
 /* Intermediate Challenges */
