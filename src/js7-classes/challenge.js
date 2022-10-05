@@ -272,7 +272,8 @@ export class Modal {
     <div class="modal">
       <h2 class="modal--title">${this.title}</h2>
       <p class="modal--message">${this.message}</p>
-    </div>`;
+    </div>
+    `;
   }
 
   /**
