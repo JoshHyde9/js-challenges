@@ -413,14 +413,19 @@ export class BankAccount {
    * @param {string} email
    * @param {number} balance
    */
-  constructor() {}
+  constructor(name, email, balance = 0) {
+    this.name = name;
+    this.email = email;
+    this._balance = balance;
+  }
 
   /**
    * A getter that returns the current balance.
    * @return {number} 20
    */
-
-  // WRITE BALANCE GETTER HERE
+  get balance() {
+    return this._balance;
+  }
 
   /**
    * A method that deposits to the balance.
@@ -431,8 +436,17 @@ export class BankAccount {
    * @return {(number|string)} 40 or "Invalid input, unable to deposit"
    */
 
-  // WRITE DEPOSIT METHOD HERE
+  deposit(toDeposit) {
+    const depositAmountAsNum = +toDeposit;
 
+    if (!depositAmountAsNum || depositAmountAsNum < 0) {
+      return "Invalid input, unable to deposit";
+    }
+
+    this._balance += depositAmountAsNum;
+
+    return this.balance;
+  }
   /**
    * A method that withdraws from the balance.
    * It checks if the input is correct.
@@ -443,5 +457,17 @@ export class BankAccount {
    * @return {(number|string)} 40 or "Invalid input, unable to deposit" or "Insufficient funds, unable to withdraw"
    */
 
-  // WRITE WITH DRAW METHOD HERE
+  withdraw(toWithdraw) {
+    const withdrawAmountAsNum = +toWithdraw;
+
+    if (!withdrawAmountAsNum || withdrawAmountAsNum < 0)
+      return "Invalid input, unable to withdraw";
+
+    if (this._balance < withdrawAmountAsNum)
+      return "Insufficient funds, unable to withdraw";
+
+    this._balance -= withdrawAmountAsNum;
+
+    return this.balance;
+  }
 }
