@@ -114,7 +114,15 @@ export const totalShoppingBasket = (shoppingBasketArr) => {
  * @returns {{id: number, name: string, ingredients: string[], country: string}[]} An array of cleaned meal objects
  */
 export const getImportantKeys = (mealsArr) => {
-  // Write code here
+  return mealsArr.map((meal) => {
+    const neededKeys = {
+      id: meal.id,
+      name: meal.name,
+      ingredients: meal.ingredients,
+      country: meal.country,
+    };
+    return neededKeys;
+  });
 };
 
 /**
