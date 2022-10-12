@@ -136,7 +136,13 @@ export const getImportantKeys = (mealsArr) => {
  * @returns {{id: number, name: string, ingredients: string[], country: string, isVegetarian: boolean, timeToCook: number}[]}
  */
 export const setImportantKeys = (mealsArr) => {
-  // Write code here
+  return mealsArr.map((meal) => {
+    const fixedMeal = { ...meal };
+    if (!fixedMeal.isVegetarian) fixedMeal.isVegetarian = false;
+    if (!fixedMeal.timeToCook) fixedMeal.timeToCook = 15;
+
+    return fixedMeal;
+  });
 };
 
 /* Expert Challenge */
