@@ -189,7 +189,7 @@ describe("Intermediate level challenges", () => {
     });
   });
 
-  xdescribe("settotalPrice() tests", () => {
+  describe("settotalPrice() tests", () => {
     it("Should return an array", () => {
       expect(Array.isArray(settotalPrice(shoppingBasket))).toBe(true);
     });
