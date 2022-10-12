@@ -99,7 +99,9 @@ export const settotalPrice = (shoppingBasketArr) => {
  * @returns {number} The total cost of the order
  */
 export const totalShoppingBasket = (shoppingBasketArr) => {
-  // Write code here
+  return shoppingBasketArr.reduce((prev, current) => {
+    return (prev += current.totalPrice);
+  }, 0);
 };
 
 /* Advanced Challenges */

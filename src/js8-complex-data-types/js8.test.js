@@ -213,7 +213,7 @@ describe("Intermediate level challenges", () => {
     });
   });
 
-  xdescribe("totalShoppingBasket() tests", () => {
+  describe("totalShoppingBasket() tests", () => {
     it("Should return a number", () => {
       expect(typeof totalShoppingBasket(shoppingBasketWithTotals)).toBe(
         "number"
