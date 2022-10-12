@@ -59,6 +59,11 @@ export const getNumberOfKeys = (object) => {
  */
 export const findMostExpensiveItem = (shoppingBasketArr) => {
   // Write code here
+  const sorted = shoppingBasketArr.sort(
+    (item, otherItem) => otherItem.price - item.price
+  );
+
+  return sorted[0];
 };
 
 /**

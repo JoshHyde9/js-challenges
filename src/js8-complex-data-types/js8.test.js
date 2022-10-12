@@ -173,7 +173,7 @@ describe("Intermediate level challenges", () => {
     },
   ];
 
-  xdescribe("findMostExpensiveItem() tests", () => {
+  describe("findMostExpensiveItem() tests", () => {
     it("Should return a single object", () => {
       expect(findMostExpensiveItem(shoppingBasket)).toHaveProperty("name");
       expect(findMostExpensiveItem(shoppingBasket).name).toBe("hoodie");
