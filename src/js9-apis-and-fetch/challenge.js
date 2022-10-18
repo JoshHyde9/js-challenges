@@ -73,7 +73,17 @@ export const findPersonWithId = (url, id) => {
  * @returns {{id: string, name: string, age: number, height: number, interests: string[], isEmployed: boolean}[] | string} A group of person objects OR A string saying "No people with interest found"
  */
 export const getPeopleWithMatchingInterests = (url, interest) => {
-  // Your code here
+  return fetch(url)
+    .then((response) => response.json())
+    .then((people) => {
+      const matchesInterest = people.filter((person) => {
+        return person.interests.includes(interest);
+      });
+
+      return matchesInterest.length
+        ? matchesInterest
+        : "No people with interest found";
+    });
 };
 
 /* Advanced Challenges */
