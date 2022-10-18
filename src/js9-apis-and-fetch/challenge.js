@@ -40,7 +40,9 @@ export const getNames = (url) => {
  * @return {{id: string, name: string, age: number, height: number, interests: string[], isEmployed: boolean}[]} The employed people from the API
  */
 export const getEmployedPeople = (url) => {
-  // Your code here
+  return fetch(url)
+    .then((response) => response.json())
+    .then((data) => data.filter((person) => person.isEmployed));
 };
 
 /* Intermediate Challenges */
