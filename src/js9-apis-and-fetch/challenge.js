@@ -28,7 +28,9 @@ export const getData = (url) => {
  * @returns {string[]} The list of names from the API
  */
 export const getNames = (url) => {
-  // Your code here
+  return fetch(url)
+    .then((response) => response.json())
+    .then((data) => data.map((person) => person.name));
 };
 
 /**
