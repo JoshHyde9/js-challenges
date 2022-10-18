@@ -17,8 +17,8 @@
  * @param {string} url - The url of the API to fetch from
  * @returns {{id: string, name: string, age: number, height: number, interests: string[], isEmployed: boolean}[]} The data from the API
  */
- export const getData = (url) => {
-  // Your code here
+export const getData = (url) => {
+  return fetch(url).then((response) => response.json());
 };
 
 /**
