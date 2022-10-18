@@ -56,7 +56,12 @@ export const getEmployedPeople = (url) => {
  * @returns {{id: string, name: string, age: number, height: number, interests: string[], isEmployed: boolean} | string} A person object OR A string saying "Person not found"
  */
 export const findPersonWithId = (url, id) => {
-  // Your code here
+  return fetch(url)
+    .then((response) => response.json())
+    .then((people) => {
+      const person = people.find((person) => person.id === id);
+      return person ? person : "Person not found";
+    });
 };
 
 /**
